@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lavanya - Healthy Food Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap"
+        rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="icon" type="image/svg" href="/static/img/logo/icon_wik.svg" />
+
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    {% include 'navbar.html' %}
+    <!-- Navbar End -->
+
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control bg-transparent p-3" placeholder="keywords"
+                            aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-light py-6 my-6 mt-0">
+        <div class="container text-center animated bounceInDown">
+            <h1 class="display-1 mb-4">Menu</h1>
+            <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item text-dark" aria-current="page">Menu</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Events Start -->
+    <div class="container-fluid event py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <small
+                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Various
+                    Menu</small>
+                <h1 class="display-5 mb-5">
+                    A Variety Of Menus Available
+                </h1>
+            </div>
+            <div class="tab-class text-center">
+                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp"
+                    data-wow-delay="0.1s">
+                    <li class="nav-item p-2">
+                        <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill active"
+                            data-bs-toggle="pill" href="#tab-1">
+                            <span class="text-dark" style="width: 150px">All Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="d-flex py-2 mx-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                            href="#tab-2">
+                            <span class="text-dark" style="width: 150px">Food</span>
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                            href="#tab-3">
+                            <span class="text-dark" style="width: 150px">Snack</span>
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                            href="#tab-4">
+                            <span class="text-dark" style="width: 150px">Drink</span>
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                            href="#tab-5">
+                            <span class="text-dark" style="width: 150px">Combo</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/sallad salmon.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Saladroll with Salmon</h4>
+                                                <a href="/static/img/sallad salmon.jpeg" data-lightbox="event-1"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/smoothie.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Smoothie Berry Bowl</h4>
+                                                <a href="/static/img/smoothie.jpeg" data-lightbox="event-2"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/kombucha.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Kombucha</h4>
+                                                <a href="/static/img/kombucha.jpeg" data-lightbox="event-3"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/soup .jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Butternut Soup</h4>
+                                                <a href="/static/img/soup .jpeg" data-lightbox="event-4"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/Fruittea.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Fruit Tea</h4>
+                                                <a href="/static/img/Fruittea.jpeg" data-lightbox="event-5"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/fresh salad.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Fresh Salad</h4>
+                                                <a href="/static/img/fresh salad.jpeg" data-lightbox="event-6"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/pancake.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Pancake Fruit</h4>
+                                                <a href="/static/img/pancake.jpeg" data-lightbox="event-7"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/pomegranate.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Pomegranate Fresh Drink</h4>
+                                                <a href="/static/img/pomegranate.jpeg" data-lightbox="event-17"
+                                                    class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/sirloin.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Steak with Vegetable</h4>
+                                                <a href="/static/img/sirloin.jpeg" data-lightbox="event-8" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/soup udang.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Shrimp Soup</h4>
+                                                <a href="/static/img/soup udang.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/mix vegetable.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Mix Vegetable</h4>
+                                                <a href="/static/img/mix vegetable.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="/static/img/tunasop.jpeg" alt="">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Tuna Soup</h4>
+                                                    <a href="/static/img/tunasop.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                            class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="/static/img/tofubowl.jpeg" alt="">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Tofu Bowl</h4>
+                                                    <a href="/static/img/tofubowl.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                            class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="/static/img/beefwithpring.jpeg" alt="">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Beef with Pring</h4>
+                                                    <a href="/static/img/beefwithpring.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                            class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="/static/img/Chicken Kale Soup.jpeg" alt="">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Chicken Kale Soup</h4>
+                                                    <a href="/static/img/Chicken Kale Soup.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                            class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="/static/img/chickenmarbella.jpeg" alt="">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Chicken Marbella</h4>
+                                                    <a href="/static/img/chickenmarbella.jpeg" data-lightbox="event-9" class="my-auto"><i
+                                                            class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/bread berry.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Bread Berry</h4>
+                                                <a href="/static/img/bread berry.jpeg" data-lightbox="event-10" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/smoothie.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Smoothie Berry Bowl</h4>
+                                                <a href="/static/img/smoothie.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/pancake.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Pancake Fruit</h4>
+                                                <a href="/static/img/pancake.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/bread egg.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Bread Egg</h4>
+                                                <a href="/static/img/bread egg.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/salad tomato.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Tommato Salad</h4>
+                                                <a href="/static/img/salad tomato.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/smoothie blueberry.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Smoothie Berry Quaker</h4>
+                                                <a href="/static/img/smoothie blueberry.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/weetabix with warm.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Weetabix with Warm</h4>
+                                                <a href="/static/img/weetabix with warm.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/corn.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Grilled Corn</h4>
+                                                <a href="/static/img/corn.jpeg" data-lightbox="event-11" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/Fruittea.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Fruit Tea</h4>
+                                                <a href="/static/img/Fruittea.jpeg" data-lightbox="event-12" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/kombucha.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Kombucha</h4>
+                                                <a href="/static/img/kombucha.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/pomegranate.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Pomegranate Fresh Drink</h4>
+                                                <a href="/static/img/pomegranate.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/herbaltea.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Herbal Tea</h4>
+                                                <a href="/static/img/herbaltea.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/Greenjuice.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Green Juice</h4>
+                                                <a href="/static/img/Greenjuice.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/Lemon water.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Lemon Water</h4>
+                                                <a href="/static/img/Lemon water.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/springjus.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Spring Juice Splash</h4>
+                                                <a href="/static/img/springjus.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/red berries smoothie.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Red Berry Smoothies</h4>
+                                                <a href="/static/img/red berries smoothie.jpeg" data-lightbox="event-13" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo1.jpg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 1</h4>
+                                                <a href="/static/img/combo1.jpg" data-lightbox="event-14" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo2.jpg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 2</h4>
+                                                <a href="/static/img/combo2.jpg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo3.jpg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 3</h4>
+                                                <a href="/static/img/combo3.jpg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo4.jpg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 4</h4>
+                                                <a href="/static/img/combo4.jpg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo5.jpg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 5</h4>
+                                                <a href="/static/img/combo5.jpg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo6.jpg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 6</h4>
+                                                <a href="/static/img/combo6.jpg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo7.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 7</h4>
+                                                <a href="/static/img/combo7.jpeg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="event-img position-relative">
+                                            <img class="img-fluid rounded w-100" src="/static/img/combo8.jpeg" alt="">
+                                            <div class="event-overlay d-flex flex-column p-4">
+                                                <h4 class="me-auto">Combo 8</h4>
+                                                <a href="/static/img/combo8.jpeg" data-lightbox="event-15" class="my-auto"><i
+                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Events End -->
+
+
+    <!-- Book Us Start -->
+    <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-1">
+                    <img src="/static/img/background-site.jpg" class="img-fluid h-100 w-100 rounded-start"
+                        style="object-fit: cover; opacity: 0.7;" alt="">
+                </div>
+                <div class="col-10">
+                    <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                        <div class="text-center">
+                            <small
+                                class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book
+                                Us</small>
+                            <h1 class="display-5 mb-5">Where you want Our Services</h1>
+                        </div>
+                        <div class="row g-4 form">
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Select Country</option>
+                                    <option value="1">USA</option>
+                                    <option value="2">UK</option>
+                                    <option value="3">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Select City</option>
+                                    <option value="1">Depend On Country</option>
+                                    <option value="2">UK</option>
+                                    <option value="3">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Select Palace</option>
+                                    <option value="1">Depend On Country</option>
+                                    <option value="2">UK</option>
+                                    <option value="3">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Selection Menu</option>
+                                    <option value="1">Food</option>
+                                    <option value="2">Snack</option>
+                                    <option value="3">Drink</option>
+                                    <option value="4">Combo</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>No. Of Palace</option>
+                                    <option value="1">100-200</option>
+                                    <option value="2">300-400</option>
+                                    <option value="3">500-600</option>
+                                    <option value="4">700-800</option>
+                                    <option value="5">900-1000</option>
+                                    <option value="6">1000+</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Various Menu</option>
+                                    <option value="1">Steak with Vegetable</option>
+                                    <option value="2">Shrimp Soup</option>
+                                    <option value="3">Mix Vegetable</option>
+                                    <option value="4">Tuna Soup</option>
+                                    <option value="5">Tofu Bowl</option>
+                                    <option value="6">Beef with Pring</option>
+                                    <option value="7">Chicken Kale Soup</option>
+                                    <option value="8">Chicken Marbella</option>
+                                    <option value="9">Bread Berry</option>
+                                    <option value="10">Smoothie Berry Bowl</option>
+                                    <option value="11">Pancake Fruit</option>
+                                    <option value="12">Bread Egg</option>
+                                    <option value="13">Tommato Salad</option>
+                                    <option value="14">Smoothie Berry Quaker</option>
+                                    <option value="15">Weetabix with Warm</option>
+                                    <option value="16">Grilled Corn</option>
+                                    <option value="16">Fruit Tea</option>
+                                    <option value="17">Kombucha</option>
+                                    <option value="18">Pomegranate Fresh Drink</option>
+                                    <option value="19">Herbal Tea</option>
+                                    <option value="20">Green Juice</option>
+                                    <option value="21">Lemon Water</option>
+                                    <option value="22">Spring Juice Splash</option>
+                                    <option value="23">Red Berry Smoothies</option>
+                                    <option value="24">Combo 1</option>
+                                    <option value="25">Combo 2</option>
+                                    <option value="26">Combo 3</option>
+                                    <option value="27">Combo 4</option>
+                                    <option value="28">Combo 5</option>
+                                    <option value="29">Combo 6</option>
+                                    <option value="30">Combo 7</option>
+                                    <option value="31">Combo 8</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="mobile" class="form-control border-primary p-2"
+                                    placeholder="Your Contact No.">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="email" class="form-control border-primary p-2"
+                                    placeholder="Enter Your Email">
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img src="/static/img/background-site.jpg" class="img-fluid h-100 w-100 rounded-end"
+                        style="object-fit: cover; opacity: 0.7;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Book Us End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h1 class="text-primary">
+                            Lava<span class="text-dark">nya</span>
+                        </h1>
+                        <p class="lh-lg mb-4">
+                            Through Healthyfood Lavanya, you can easily order healthy food anytime, with fast and secure delivery services. Enjoy the convenience of maintaining a healthy diet with Lavanya, your trusted partner on your journey to a healthy lifestyle.
+                        </p>
+                        <div class="footer-icon d-flex">
+                            <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm-square rounded-circle"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="mb-4">Special Menu</h4>
+                        <div class="d-flex flex-column align-items-start">
+                            <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Salad Roll
+                                with Salmon</a>
+                            <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Smoothie Berry Bowl</a>
+                            <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Kombucha
+                                </a>
+                            <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Butternut
+                                Soup</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="mb-4">Contact Us</h4>
+                        <div class="d-flex flex-column align-items-start">
+                            <p>
+                                <i class="fa fa-map-marker-alt text-primary me-2"></i> 123
+                                Klaten City.
+                            </p>
+                            <p>
+                                <i class="fa fa-phone-alt text-primary me-2"></i> (+62) 3456
+                                7890 123
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope text-primary me-2"></i>
+                                lavanya@gmail.com
+                            </p>
+                            <p>
+                                <i class="fa fa-clock text-primary me-2"></i> 12/7 Hours
+                                Service
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="mb-4">Social Gallery</h4>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img src="/static/img/sirloin.jpeg" class="img-fluid rounded-circle border border-primary p-2"
+                                    alt="" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/static/img/fresh salad.jpeg" class="img-fluid rounded-circle border border-primary p-2"
+                                    alt="" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/static/img/pancake.jpeg" class="img-fluid rounded-circle border border-primary p-2"
+                                    alt="" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/static/img/Lemon water.jpeg" class="img-fluid rounded-circle border border-primary p-2"
+                                    alt="" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/static/img/weetabix with warm.jpeg" class="img-fluid rounded-circle border border-primary p-2"
+                                    alt="" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/static/img/sirloin.jpeg" class="img-fluid rounded-circle border border-primary p-2"
+                                    alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Lavanya - Healthy Food
+                        Website</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 my-auto text-center text-md-end text-white">
+                    Final Project Digital Bisnis
+                    <a class="border-bottom" href="https://home.amikom.ac.id/">Universitas Amikom Yogyakarta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
